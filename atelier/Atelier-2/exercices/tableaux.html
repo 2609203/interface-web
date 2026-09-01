@@ -12,23 +12,110 @@
     <section>
         <h2>Notes des étudiants</h2>
         <!-- À COMPLÉTER: Créer un tableau simple -->
+         <table>
+            <tr>  
+            <th>Nom</th>
+            <th>Math</th>
+            <th>Francais</th>
+            <th>Moyenne</th>
+            </tr>
+            <tr>
+                <td>Dupont</td>
+                <td>15</td>
+                <td>12</td>
+                <td>13.5</td>
+            </tr>
+            <tr>
+                <td>Martin</td>
+                <td>18</td>
+                <td>16</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>Durant</td>
+                <td>11</td>
+                <td>14</td>
+                <td>12.5</td>
+            </tr>
+          
+         </table>
     </section>
 
     <!-- Exercice 9: Tableau avec thead, tbody, tfoot -->
     <section>
         <h2>Rapport financier</h2>
         <!-- À COMPLÉTER: Créer un tableau structuré -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mois</th>
+                        <th>Revenus</th>
+                        <th>Dépenses</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Janvier</td>
+                        <td>5000$</td>
+                        <td>3000$</td>
+                    </tr>
+                    <tr>
+                        <td>Février</td>
+                        <td>4500$</td>
+                        <td>2800$</td>
+                    </tr>
+                    <tr>
+                        <td>Mars</td>
+                        <td>5200$</td>
+                        <td>3100$</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Total</th>
+                        <td>14700</td>
+                        <td>8900</td>
+                    </tr>
+                </tfoot>
+            </table>
     </section>
 
     <!-- Exercice 10: Tableau avec colspan et rowspan -->
     <section>
         <h2>Planning des cours</h2>
         <!-- À COMPLÉTER: Créer un tableau avec cellules fusionnées -->
+         <table>
+            <tr>
+                <th scope="col">Heure</th>
+                <th scope="col" colspan="3">Lundi a Mecredi</th>
+                <th scope="col">Jeudi</th>
+            </tr>
+            <tr>
+                <td>9h-10h</td>
+                <td >HTLM</td>
+                <td>CSS</td>
+                <td>JS</td>
+                <td rowspan="2">Projet</td>
+            </tr>
+            <tr>
+                <td>10h-11h</td>
+                <td >PHP</td>
+                <td>MySQL</td>
+                <td>Tests</td>
+                <td rowspan="2">Projet</td>
+            </tr>
+         </table>
+
     </section>
 
     <!-- Navigation -->
     <nav>
         <!-- À COMPLÉTER: Liens de navigation relatifs -->
+         <ul>
+            <li><a href="../index.html"></a>Retours acceuil</li>
+            <li><a href="tableaux.html"></a>Vers tableaux</li>
+            <li><a href="/atelier/Atelier-2/exercices/formulaires.html">Vers Formulaires</a></li>
+         </ul>
     </nav>
 </body>
 </html>

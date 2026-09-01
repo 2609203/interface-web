@@ -12,23 +12,76 @@
     <section>
         <h2>Formulaire d'inscription</h2>
         <!-- À COMPLÉTER: Créer le formulaire d'inscription -->
+         <form action="../resultats/inscription.html" method="post">
+
+            <label for="Nom">Nom</label>
+            <input name="Nom" id="Nom" type="text" required>
+
+            <label for="Email">Emai</label>
+            <input type="email" id="Email" required>
+
+            <label for="Password">Password</label>
+            <input type="password" id="Password" name="password" minlength="8" required>
+
+            <button type="submit">S'inscire</button>
+
+         </form>
     </section>
 
     <!-- Exercice 12: Formulaire de contact avec méthode GET -->
     <section>
         <h2>Formulaire de contact</h2>
         <!-- À COMPLÉTER: Créer le formulaire de contact -->
+         <form action="../resultats/contact.html" methode="GET">
+
+            <label for="sujet">Sujet</label>
+            <input name="sujet" id="sujet" type="text" required>
+        
+            <label for="message">Votre message</label>
+            <textarea type="message" id="message" rows="4" cols="50"></textarea>
+
+            <label for="priorite"></label>
+            <select name="priorite" id="priorite">
+                <option value="bas">Basse</option>
+                <option value="Moy">Moyenne</option>
+                <option value="hau">Haute</option>
+            </select>
+
+            <button type="submit">Envoyer</button>
+         </form>
     </section>
 
     <!-- Exercice 13: Formulaire avec validation -->
     <section>
         <h2>Formulaire de commande</h2>
         <!-- À COMPLÉTER: Créer le formulaire avec validation -->
+         <form action="../resultats/contact.html" method="post">
+            <input type="number" min="1" max="10" value="1">
+            <input type="date" required name="livraison">
+            <input type="tel" name="telephone" maxlength="10">
+            <label for="conditions">J'accepte les conditions</label>
+            <input type="checkbox" name="conditions" id="conditions">
+            <h1>Mode de paiment</h1>
+            <label for="carte">Carte</label>
+            <input type="radio" id="carte" name="paiment" value="carte">
+            <label for="paypal">Paypal</label>
+            <input type="radio" name="paiment" id="paypal" value="paypal">
+            <label for="virement">Virement</label>
+            <input type="radio" name="paiment" id="virement" value="virement">
+            <button type="reset">Effacer</button>
+            <button type="submit">Commander</button>
+
+         </form>
     </section>
 
     <!-- Navigation -->
     <nav>
         <!-- À COMPLÉTER: Liens de navigation relatifs -->
+         <ul>
+            <li><a href="listes.html"></a>Listes</li>
+            <li><a href="multimedia.html"></a>Multimedia</li>
+            <li><a href="tableaux.html"></a>tableaux</li>
+         </ul>
     </nav>
 </body>
 </html>
