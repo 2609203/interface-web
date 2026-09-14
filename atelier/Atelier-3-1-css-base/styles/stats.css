@@ -1,0 +1,118 @@
+/* Styles pour la page des statistiques - AVEC PROBLÈMES À CORRIGER */
+
+.stats-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stats-container h2 {
+    text-align: center;
+    color: #013369;
+    margin-bottom: 40px;
+}
+
+/* Section modèle de boîte - PROBLÈMES À CORRIGER */
+.box-model-demo {
+    background: #f8f9fa;
+    padding: 30px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+}
+
+.demo-box {
+    width: 300px;
+    background: #013369;
+    color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border: 5px solid #d50a0a;
+}
+
+.demo-box p {
+    margin: 0;
+}
+
+.centered-box {
+    width: 400px;
+    background: #28a745;
+    color: white;
+    padding: 25px;
+    margin: 20px 0;
+    border: 3px solid #ffc107;
+    border-radius: 10px;
+}
+
+.centered-box p {
+    margin: 0;
+    text-align: center;
+}
+
+/* Section overflow de texte - PROBLÈMES À CORRIGER */
+.text-overflow-demo {
+    background: white;
+    padding: 30px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.overflow-box {
+    width: 300px;
+    height: 100px;
+    background: #e9ecef;
+    padding: 15px;
+    border: 2px solid #6c757d;
+    margin: 20px 0;
+}
+
+.ellipsis-box {
+    width: 250px;
+    background: #fff3cd;
+    padding: 10px;
+    border: 1px solid #ffeaa7;
+    margin: 20px 0;
+}
+
+.scroll-box {
+    width: 400px;
+    height: 80px;
+    background: #d1ecf1;
+    padding: 15px;
+    border: 1px solid #bee5eb;
+    margin: 20px 0;
+}
+
+/* Section priorité des sélecteurs - PROBLÈMES À CORRIGER */
+.priority-demo {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.priority-box {
+    background: yellow;
+    padding: 20px;
+    margin: 20px 0;
+    border: 2px solid black;
+}
+
+#special-box {
+    background: blue !important;
+    color: white;
+}
+
+.important-text {
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.priority-box .important-text {
+    color: green !important;
+    font-size: 16px;
+}
+
+#special-box .important-text {
+    color: white;
+}

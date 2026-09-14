@@ -1,0 +1,44 @@
+/* Fichier CSS externe avec styles de base */
+.header {
+  background-color: #013369 !important;
+  color: white;
+  font-weight: bold;
+}
+
+.nav ul {
+  background-color: #d50a0a;
+  padding: 10px 0;
+  list-style-type: disc;
+}
+
+.nav a {
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.stats-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.stat-card {
+  background: #f8f9fa;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h3 {
+  font-size: 1.5em;
+  margin: 0;
+  color: #013369;
+}
+
+.stat-card p {
+  margin: 5px 0 0 0;
+  color: #666;
+}
