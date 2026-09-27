@@ -1,0 +1,67 @@
+section{
+   background:linear-gradient(135deg,#bdc0c4,#f5f6f8);
+   height: 150px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+h1{
+
+    color: #135ad4;;
+}
+
+main p{
+    color: gray;
+}
+
+.GrilleInfo{
+display: grid;
+grid-template-areas:
+    "Poutine Salade General"
+    "Brownies Vide Vide";
+grid-template-columns:auto auto auto;
+grid-template-rows: auto ;
+justify-content: space-between;
+padding: 100px;
+}
+
+.GrilleInfo > #Poutine{
+    grid-area: Poutine;
+
+}
+
+.GrilleInfo > #Salade{
+    grid-area: Salade;
+
+}
+
+.GrilleInfo > #Brownies{
+    grid-area: Brownies;
+
+}
+
+.info{
+    background-color: white ;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+    font-size: small;
+    font-weight:bold;
+    width: 350px;
+}
+
+.badges{
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+}
+
+img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+}

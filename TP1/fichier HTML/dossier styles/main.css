@@ -146,13 +146,37 @@ button:hover{
 }
 
 
-.inf{
-    background-color: #f8f9fa ;
+.badges-info{
+    background-color: #f8f9fa;
     border-radius: 15px;
-    padding: 0.3rem,0.8rem;
+    padding: 0.3rem 0.8rem;
     font-size: small;
     font-weight:bold;
 }
 
+ .Facile{
+    background-color: #39B54A;
+    border-radius: 15px;
+    padding: 0.3rem 0.8rem;
+    font-size: small;
+    font-weight:bold;
+    color: green;
+}
 
+ .Moyen{
+    background-color: #856404;
+    border-radius: 15px;
+    padding: 0.3rem 0.8rem;
+    font-size: small;
+    font-weight:bold;
+    color: yellow;
+}
 
+ .Difficile{
+    background-color: #721c24;
+    border-radius: 15px;
+    padding: 0.3rem 0.8rem;
+    font-size: small;
+    font-weight:bold;
+    color: red;
+}
