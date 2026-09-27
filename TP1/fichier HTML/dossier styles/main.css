@@ -1,5 +1,7 @@
 *{
     font-family:Arial;
+    padding: 0px;
+    margin: 0px;
 }
 
 
@@ -11,6 +13,7 @@ header{
     justify-content: space-around;
     position: sticky;
     top: 0px;
+    height: 100px;
 }
 
 header nav{
@@ -55,8 +58,10 @@ header #current a:link{
 
 footer{
     height: auto;
-    position: sticky;
+    position:static;
     bottom: 0px;
+    align-items:end;
+    justify-content:center;
 }
 
 #footer{
@@ -64,10 +69,14 @@ footer{
     color: grey;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    height: 170px;
+
 }
 
 footer h5{
     color: darkblue;
+    margin: 10px;
 }
 
 #Contact div{
@@ -137,9 +146,9 @@ button:hover{
 }
 
 
-.info{
+.inf{
     background-color: #f8f9fa ;
-    border: 15px;
+    border-radius: 15px;
     padding: 0.3rem,0.8rem;
     font-size: small;
     font-weight:bold;
