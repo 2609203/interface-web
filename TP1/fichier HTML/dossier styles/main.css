@@ -1,0 +1,149 @@
+*{
+    font-family:Arial;
+}
+
+
+header{
+    grid-area: Header;
+    background:linear-gradient(135deg,#002768,#135ad4);
+    color: aliceblue;
+    display: flex;
+    justify-content: space-around;
+    position: sticky;
+    top: 0px;
+}
+
+header nav{
+    display: flex;
+}
+
+header nav ul{
+    display: flex;
+    place-items: center;
+    color: aliceblue;
+    justify-content: space-between;
+    width: 500px;
+    list-style: none;
+
+    
+}
+
+header a:link{
+    color:white;
+    text-decoration: none;
+}
+header a:visited{
+color: white;
+}
+header a:hover{
+color: lightblue;
+text-decoration: underline;
+}
+header a:active{
+    color: blue;
+    text-decoration: underline;
+}
+header a:focus{
+color: blue;
+text-decoration: underline;
+}
+
+header #current a:link{
+    text-decoration: underline;
+}
+
+
+footer{
+    height: auto;
+    position: sticky;
+    bottom: 0px;
+}
+
+#footer{
+    background-color:#CAE9FA;
+    color: grey;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer h5{
+    color: darkblue;
+}
+
+#Contact div{
+    display: flex;
+    align-items: center;
+}
+
+#Contact a:link{
+    text-decoration: none;
+}
+#Contact a:active{
+text-decoration: underline;
+}
+#Contact a:hover{
+text-decoration: underline;
+}
+
+#Liens{
+    display: flex;
+    flex-direction: column;
+}
+
+#Liens a:link{
+    color:grey;
+    text-decoration: none;
+}
+#Liens a:visited{
+color: grey;
+}
+#Liens a:active{
+color: blue;
+text-decoration: underline;
+}
+#Liens a:hover{
+color: blue;
+text-decoration: underline;
+}
+
+
+#Cright{
+    color: grey;
+    background-color:#CAE9FA;
+    display: flex;
+    align-items:flex-end; 
+    justify-content: space-around
+
+}
+
+button{
+    border: 15px solid #39B54A ;
+    background-color: #39B54A;
+    border-radius: 25px;
+    color: white;
+    font-weight:bold;
+    padding: 12px,24px;
+    transition: all 0.3s ease;
+}
+
+button:hover{
+    border: 15px solid blue ;
+    background-color: blue;
+    border-radius: 25px;
+    color: white;
+    font-weight:bold;
+    padding: 12px,24px;
+    transition: all 0.3s ease;
+}
+
+
+.info{
+    background-color: #f8f9fa ;
+    border: 15px;
+    padding: 0.3rem,0.8rem;
+    font-size: small;
+    font-weight:bold;
+}
+
+
+

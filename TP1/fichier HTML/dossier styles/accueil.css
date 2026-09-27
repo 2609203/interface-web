@@ -1,0 +1,13 @@
+.Grille{
+display: grid;
+grid-template-areas:
+    "Header Header Header"
+    "Section Aside Aside"
+    "Recettes Techniques Saisonnier"
+    "Footer Footer Footer";
+grid-template-columns: 15fr 4fr auto;
+grid-template-rows: auto auto auto auto;
+gap: 0;
+padding: 0;
+margin: 0;
+}

@@ -1,0 +1,141 @@
+/*
+Détaile du texte`et background, pourrait causer probléme dans future
+*/
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    text-align: justify;
+}
+h2{
+border-style: solid;
+color: red;
+}
+/*Grille Applicer*/
+.Grille{
+    display: grid;
+    grid-template-areas:
+        "Header"
+        "Info"
+        "Wyvern"
+        "Wyrm"
+        "Amphithere"
+        "Lindworm"
+        "Drake"
+        "Dragon"
+        "Summery"
+        "Video"
+        "Footer";
+    grid-template-columns: 15fr;
+    gap: 5px;
+    background-color: white;
+    padding: 5px;
+    }
+    .Grille > .Header{
+        grid-area: Header;
+        font-size: large;
+        display: flex;
+        justify-content: center;
+        color: white;
+        background-color: black;
+    }
+    .Grille > .Info{
+        grid-area: Info;
+        background-color:red;
+        font-size: x-large;
+       
+    }
+    .Grille > .Wyvern{
+    grid-area: Wyvern;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    }
+    .Grille > .Wyrm{
+    grid-area: Wyrm;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    }
+    .Grille > .Amphithere{
+    grid-area: Amphithere;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    }
+    .Grille > .Lindworm{
+    grid-area: Lindworm;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    }
+    .Grille > .Drake{
+    grid-area: Drake;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    }
+    .Grille > .Dragon{
+    grid-area: Dragon;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    }
+    .Grille > .Summery{
+    grid-area: Summery;
+    background-color:red;
+    font-size: x-large;
+    }
+    .Grille > .Video{
+    grid-area: Video;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    }
+    .Grille > .Footer{
+    grid-area: Footer;
+     background-color: red;
+    height: 50px;
+    }
+/*comment les lien fonctionne*/
+#Location{
+color:brown
+}
+a{
+    background-color: black;
+}
+a:link{
+    color:white;
+}
+a:visited{
+color: goldenrod;
+}
+a:hover{
+color:brown
+}
+a:active{
+    color: red
+}
+a:focus{
+    color:red;
+    }
+/*pour Footer et Lien*/
+#LowerLien{
+        font-size: larger;
+        display: flex;
+        justify-content: space-around;
+}

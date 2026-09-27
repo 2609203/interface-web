@@ -1,0 +1,96 @@
+/*
+Détaile du texte
+*/
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    text-align: justify;
+}
+/*Grille Applicer*/
+.Grille{
+    display: grid;
+    grid-template-areas:
+        "Header Header"
+        "ImageBO TextBO"
+        "TextMI ImageMI"
+        "ImagePO TextPO"
+        "Footer Footer";
+    gap: 5px;
+    background-color: black;
+    padding: 5px;
+}
+.Grille > .Header{
+    grid-area: Header;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+/*Text Copr*/
+.Grille > .TextBO{
+    grid-area: TextBO;
+    background-color:red;
+    font-size: x-large;
+    height: 500px;
+    
+}
+.Grille > .ImageBO{
+grid-area: ImageBO;
+}
+/*Text Coportment*/
+.Grille > .TextMI{
+    grid-area: TextMI;
+    background-color:red;
+    height: 400px;
+    font-size: x-large;
+}
+.Grille > .ImageMI{
+grid-area: ImageMI;
+float: right;
+}
+/*Text Pouvoir*/
+.Grille > .TextPO{
+    grid-area: TextPO;
+    background-color:red;
+    font-size: x-large;
+    height: 500px;
+}
+.Grille > .ImagePO{
+grid-area: ImagePO;
+}
+
+/*pour Footer et Lien*/
+.Grille > .Footer{
+grid-area: Footer;
+background-color: red;
+height: 60px;
+}
+/*comment les lien fonctionne*/
+#Location{
+    color:brown
+    }
+    a{
+        background-color: black;
+    }
+    a:link{
+        color:white;
+    }
+    a:visited{
+    color: goldenrod;
+    }
+    a:hover{
+    color:brown
+    }
+    a:active{
+        color: red
+    }
+    a:focus{
+        color:red;
+        }
+        /*pour Footer et Lien*/
+#LowerLien{
+    font-size: larger;
+    display: flex;
+    justify-content: space-around;
+}
