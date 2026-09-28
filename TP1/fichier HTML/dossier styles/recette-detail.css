@@ -1,0 +1,100 @@
+section{
+    padding-left: 50px;
+    background:linear-gradient(180deg,#ecedef,#e4e5e6);
+    padding-bottom: 50px;
+}
+#bloc-info{
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    padding-top:40px;
+    text-align: center;
+    
+}
+
+#bloc-info h3{
+    font-size:x-large;
+    color: rgb(0, 0, 255);
+    padding-bottom: 10px;
+}
+
+.GrilleInfo{
+display: grid;
+grid-template-areas:
+    "Poutine Texte";
+grid-template-columns:auto;
+grid-template-rows: auto;
+justify-content: space-between;
+padding: 100px;
+}
+
+.GrilleInfo h2{
+    color: blue;
+    text-align: start;
+}
+
+.GrilleInfo > #texte{
+    grid-area: Texte;
+}
+
+.GrilleInfo > #images{
+    grid-area: Poutine;
+
+}
+
+#images img{
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+#Chemin{
+    display: flex;
+    padding-top: 30px;
+}
+
+#Chemin a:link{
+    color: rgb(0, 0, 255);
+    text-decoration: none;
+}
+
+#Chemin a:visited{
+    color: rgb(0, 0, 255);
+    text-decoration: none;
+}
+
+#Chemin a:active{
+color: grey;
+text-decoration: underline;
+}
+
+#Chemin a:hover{
+color: grey;
+text-decoration: underline;
+}
+
+.GrilleInfo li{
+    padding-left: 1.5rem;
+    line-height: 1.6;
+}
+
+#Conseils{
+    background-color: #f8f9fa;
+    border-radius: 25px;
+    border-left:solid blue;
+    width: 450px;
+    padding: 30px;
+}
+
+#button{
+    padding-bottom: 100px;
+    padding-left: 100px;
+}
+button{
+    border: 15px solid  #6c757d ;
+    background-color:  #6c757d;
+}
+
+button:hover{
+    border: 15px solid #5a6268 ;
+    background-color: #5a6268;
+}
