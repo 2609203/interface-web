@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../dossier styles/main.css" />
         <link rel="stylesheet" href="../dossier styles/saisonnier.css" />
-        <title>Accueil</title>
+        <title>Saisonnier</title>
     </head> 
 
    
@@ -17,16 +17,97 @@
         </div>
         <nav >
         <ul>
-        <li id="current"><a href="/TP1/fichier HTML/index.html">Accueil</a></li>
+        <li><a href="/TP1/fichier HTML/index.html">Accueil</a></li>
         <li><a href="/TP1/fichier HTML/dossier pages/recettes.html">Recettes</a></li>
         <li><a href="/TP1/fichier HTML/dossier pages/techniques.html">Techniques</a></li>
-        <li><a href="/TP1/fichier HTML/dossier pages/saisonnier.html">saisonnier</a></li>
+        <li id="current"><a href="/TP1/fichier HTML/dossier pages/saisonnier.html">saisonnier</a></li>
         <li><a href="">A proppos</a></li>
         </ul>
         </nav>
     </header>
     
     <main>
+        <section>
+            <h1>Produits de saison au Québec</h1>
+            <br>
+            <p>Découvrez les produits locaux selon les mois de l'année</p>
+
+        </section>
+
+        <div id="texteEnTete"><p>Cuisiner selon les saisons,c'est profiter des saveurs maximum de leur fraicheur tout<br>
+                 en soutenant les producteur locaux</p></div>
+
+        <article>
+            
+            <div id="tableau">
+            <table>
+                <caption><h3>Disponibilité par mois (extraits)</h3></caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Mois</th>
+                        <th scope="col">Produit</th>
+                        <th scope="col">Disponibiliter</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mai</td>
+                        <td>Asperge</td>
+                        <td><div class="Facile">Haute</div></td>
+                    </tr>
+                    <tr>
+                        <td>Juin</td>
+                        <td>Fraise</td>
+                        <td><div class="Facile">Haute</div></td>
+                    </tr>
+                    <tr>
+                        <td>Juillet</td>
+                        <td>Bleuet</td>
+                        <td><div class="Facile">Haute</div></td>
+                    </tr>
+                    <tr>
+                        <td>Août</td>
+                        <td>Mais</td>
+                        <td><div class="Facile">Haute</div></td>
+                    </tr>
+                    <tr>
+                        <td>Septembre</td>
+                        <td>Pomme</td>
+                        <td><div class="Facile">Haute</div></td>
+                    </tr>
+                    <tr>
+                        <td>Octobre</td>
+                        <td>Citrouille</td>
+                        <td><div class="Moyen">Moyen</div></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+            </article>
+
+             <div id="Conseil"><h2>Conseil pour bien choisir</h2></div>
+
+            <article class="GrilleInfo">
+           
+
+            <div class="info" id="Fraicheur">
+             <h3>Fraicheur</h3>
+             <p>Priviligiez les produit de saison pour une qualité optimal et des prix plus avantageux.</p>
+            </div>
+            
+            <div class="info" id="Local">
+             <h3>Local</h3>
+             <p>Encouragez les producteurs québécois en choisissant des produits cultivés près de chez vous</p>
+            </div>
+
+            <div class="info" id="Conservation">
+             <h3>Conservation</h3>
+             <p>profitez de l'abondance saisonnière pour congeler ou conserver vos produit préférés</p>
+            </div>
+
+        </article>
+
+
 
     </main>
 

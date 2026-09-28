@@ -1,0 +1,112 @@
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:#d8d8d8;
+    padding: 30px;
+}
+
+section h1{
+    color: blue;
+}
+
+section p{
+    color: grey;
+    
+}
+
+#texteEnTete{
+    color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    height: 100px;
+}
+
+#tableau{
+    display: flex;
+    border-radius: 25px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    
+
+    width: fit-content;
+    padding: 50px;
+}
+
+
+
+article table{
+    width: 1000px;
+   
+
+}
+
+article table caption{
+    color: blue;
+}
+
+
+
+article thead{
+    background-color: #f8f9fa;
+    font-weight: 600;
+    text-align: left;
+    height: 40px;
+}
+
+
+
+article td div{
+    width: fit-content;
+}
+
+.GrilleInfo{
+display: grid;
+grid-template-areas:
+    "Fraicheur Local Conservation";
+grid-template-columns: repeat(auto-fit,minmax(250,1fr));
+text-align: center;
+padding: 50px;
+}
+
+.GrilleInfo h3{
+    font-size:1.2rem ;
+    color: blue;
+    margin-bottom: 1rem;
+}
+
+#Conseil{
+    grid-area: conseil;
+    text-align: center;
+    color: blue;
+    padding-top: 30px;
+}
+
+.GrilleInfo > #Fraicheur{
+    grid-area: Fraicheur;
+    padding: 2rem;
+}
+
+.GrilleInfo > #Local{
+    grid-area: Local;
+    padding: 2rem;
+}
+
+.GrilleInfo > #Conservation{
+    grid-area: Conservation;
+    padding: 2rem;
+}
+
+.GrilleInfo .info{
+    background-color: white ;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    width: fit-content;
+}
+
+
+
+
