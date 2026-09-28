@@ -1,0 +1,70 @@
+.GrilleInfo{
+display: grid;
+grid-template-areas:
+    "Coupes Cuisson Mesure"
+    "Conseil Conseil Conseil";
+grid-template-columns:auto flex;
+grid-template-rows: auto;
+justify-content: space-between;
+padding: 100px;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:#d8d8d8;
+    padding: 30px;
+}
+
+section h1{
+    color: blue;
+}
+
+.GrilleInfo h2{
+    color: blue;
+}
+
+.GrilleInfo h3{
+    font-weight: 600;
+
+}
+
+.GrilleInfo > #Coupes{
+    grid-area: Coupes;
+    width: 300px;
+
+}
+
+.GrilleInfo > #Cuisson{
+    grid-area: Cuisson;
+    width: 300px;
+
+
+}
+
+.GrilleInfo > #Mesures{
+    grid-area: Mesure;
+    width: 300px;
+
+
+}
+
+.GrilleInfo > #Conseil{
+    grid-area: Conseil;
+    background-color: greenyellow ;
+    border-left: solid green;
+    border-radius: 25px;
+    padding: 30px;
+}
+article div div{
+    padding: 20px;
+
+}
+
+.carte{
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
