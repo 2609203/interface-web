@@ -124,7 +124,7 @@ margin: 50px;
 .GrilleInfo{
 grid-template-areas:
     "Fraicheur Local"
-     "Conservation Vide";
+    "Conservation Vide";
 }  
 
 

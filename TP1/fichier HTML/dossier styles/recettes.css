@@ -8,7 +8,7 @@ section{
    text-align: center;
 }
 
-h1{
+section h1{
 
     color: #135ad4;;
 }
@@ -81,8 +81,6 @@ justify-content: center;
 grid-template-areas:
     "Poutine Salade"
     "General Brownies";
-
-   
 }  
 
 }
@@ -102,7 +100,7 @@ grid-template-areas:
         justify-content: center;
         align-items: center;
         width: 100%;
-        overflow: auto;
+       
           
     }
 
@@ -112,15 +110,6 @@ grid-template-areas:
 
 @media (max-width:480px){
 
-      .GrilleInfo .info{
-        
-        width: 100%;
-        justify-self: center;
-        align-self: center;
-        overflow: auto;
-
-        
-        
-    }
+      
 
 }

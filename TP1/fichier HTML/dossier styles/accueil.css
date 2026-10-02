@@ -1,3 +1,15 @@
+img{
+    border-radius:25px;
+}
+
+
+
+main p{
+    color: grey;
+}
+
+
+
 .Héro{
 display: flex;
 background:linear-gradient(180deg,#ecedef,#e4e5e6);
@@ -6,18 +18,18 @@ padding-top: 40px;
 padding-bottom: 40px;
 }
 
-.GrilleInfo{
-display: grid;
-grid-template-areas:
-    "Recettes Techniques Saisonnier ";
-grid-template-columns:auto;
-grid-template-rows:auto;
-justify-content: center;
-margin: 100px;
+.Héro  #text-héro{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    max-width: 500px;
 }
 
- img{
-    border-radius:25px;
+.Héro  #Image-héro{
+    flex: 1;
+    object-fit: cover;
+    width: 100%;
 }
 
 .Héro h1{
@@ -30,25 +42,17 @@ margin: 100px;
 
 }
 
-main p{
-    color: grey;
+.GrilleInfo{
+display: grid;
+grid-template-areas:
+    "Recettes Techniques Saisonnier ";
+grid-template-columns:auto;
+grid-template-rows:auto;
+justify-content: center;
+margin: 100px;
 }
 
-.Héro  #text-héro{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    max-width: 500px;
-}
 
-
-
-.Héro  #Image-héro{
-    flex: 1;
-    object-fit: cover;
-    width: 100%;
-}
 
 .GrilleInfo > #Recettes{
     grid-area: Recettes;
@@ -98,16 +102,6 @@ grid-template-areas:
     "Saisonnier Vide";
 }  
 
-.Héro  #text-héro{
-    max-width: 325px;
-}
-
-.Héro #Image-héro{
-    
-    overflow: auto;
-
-}
-
 
 }
 
@@ -121,10 +115,12 @@ grid-template-areas:
     }
 
     .Héro{
+        object-fit: cover;
         flex-direction: column;  
         text-align: center;
         align-items: center;
         justify-content: center; 
+        height: auto;
     }
 
     .GrilleInfo{
@@ -136,7 +132,7 @@ grid-template-areas:
         justify-self: center;
         align-self: center;
         width: 100%;
-        overflow: auto;
+        
         
     }
     
@@ -144,15 +140,6 @@ grid-template-areas:
 }
 
 @media (max-width:480px){
-    .GrilleInfo .info{
-        
-        width: 100%;
-        justify-self: center;
-        align-self: center;
-        overflow: auto;
-
-        
-        
-    }
+    
 }
 
