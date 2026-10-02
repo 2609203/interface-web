@@ -4,16 +4,26 @@
     margin: 0px;
 }
 
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+}
+
+main{
+    flex: 1;
+}
+
 
 header{
-    grid-area: Header;
     background:linear-gradient(135deg,#002768,#135ad4);
     color: aliceblue;
     display: flex;
     justify-content: space-around;
     position: sticky;
     top: 0px;
-    height: 100px;
+    padding: 30px ;
 }
 
 header nav{
@@ -58,7 +68,6 @@ header #current a:link{
 
 footer{
     height: auto;
-    position:static;
     bottom: 0px;
     align-items:end;
     justify-content:center;
@@ -179,4 +188,52 @@ button:hover{
     font-size: small;
     font-weight:bold;
     color: red;
+}
+
+@media  (max-width:1024px){
+    header{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+
+    #footer{
+        display: grid;
+        grid-template-areas:
+    "Cusine Contact"
+    "Lien Vide";
+        height: 300px;
+        flex: 1;
+        object-fit: cover;
+        width: 100%;
+    }
+    
+}
+
+@media (max-width:768px){
+   #footer{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    height: auto;
+   }
+
+   #Contact{
+        transform: none;
+        margin: 10px;
+    }
+
+    #Cuisine{
+        transform: none;
+        margin: 10px;
+    }
+
+
+   #Liens{
+    align-self: flex-start;
+    transform: none;
+    margin: 10px;
+        
+    }
+
 }

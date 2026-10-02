@@ -3,9 +3,10 @@ display: grid;
 grid-template-areas:
     "Coupes Cuisson Mesure"
     "Conseil Conseil Conseil";
-grid-template-columns:auto flex;
+grid-template-columns:min-content min-content min-content;
 grid-template-rows: auto;
-justify-content: space-between;
+justify-content: center;
+
 padding: 100px;
 }
 
@@ -33,21 +34,19 @@ section h1{
 
 .GrilleInfo > #Coupes{
     grid-area: Coupes;
-    width: 300px;
+
 
 }
 
 .GrilleInfo > #Cuisson{
     grid-area: Cuisson;
-    width: 300px;
+
 
 
 }
 
-.GrilleInfo > #Mesures{
+.GrilleInfo > #Mesure{
     grid-area: Mesure;
-    width: 300px;
-
 
 }
 
@@ -55,16 +54,71 @@ section h1{
     grid-area: Conseil;
     background-color: greenyellow ;
     border-left: solid green;
-    border-radius: 25px;
+    border-radius: 15px;
     padding: 30px;
+    margin: 10px;
 }
-article div div{
-    padding: 20px;
 
+.box{
+min-width: 300px;
+margin: 10px;
+background-color: white;
+border-radius: 15px;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+padding: 20px;
 }
+
 
 .carte{
     background-color: white;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.1);
+    margin: 50px;
+    padding: 15px;
 }
+
+#Mesures .carte{
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    box-shadow: none;
+    margin: 50px;
+    padding: 15px;
+
+}
+
+@media  (max-width:1024px){
+    
+.GrilleInfo{
+grid-template-areas:
+    "Coupes Cuisson"
+    "Mesure vide"
+    "Conseil Conseil";
+}  
+
+
+}
+
+@media  (max-width:768px){
+
+
+    .GrilleInfo{
+       grid-template-areas:
+        "Coupes"
+        "Cuisson" 
+        "Mesure"
+        "Conseil";
+        grid-template-columns:100%;
+        justify-self: center;
+        align-self: center;
+        width: 100%;
+        overflow: auto;
+        
+    }
+    
+    
+}
+
+@media (max-width:480px){
+   
+}
+

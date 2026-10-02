@@ -1,37 +1,31 @@
-.GrilleHéro{
-display: grid;
-grid-template-areas:
-    "Section Aside ";
-grid-template-columns: 450px auto;
-grid-template-rows: auto ;
-gap: 0px;
-padding: 50px;
-margin: 0px;
-background:linear-gradient(180deg,#ecedef,#e4e5e6);
+.Héro{
 display: flex;
+background:linear-gradient(180deg,#ecedef,#e4e5e6);
+height: 500px;
+padding-top: 40px;
+padding-bottom: 40px;
 }
 
 .GrilleInfo{
 display: grid;
 grid-template-areas:
     "Recettes Techniques Saisonnier ";
-grid-template-columns:auto auto auto;
-grid-template-rows: auto ;
-display: flex;
-justify-content: space-around;
-padding: 100px;
+grid-template-columns:auto;
+grid-template-rows:auto;
+justify-content: center;
+margin: 100px;
 }
 
  img{
     border-radius:25px;
 }
 
-.GrilleHéro h1{
+.Héro h1{
     color: #135ad4;
 
 }
 
-.GrilleHéro h3{
+.Héro h3{
     color: #39B54A;
 
 }
@@ -40,18 +34,20 @@ main p{
     color: grey;
 }
 
-.GrilleHéro > #text-héro{
-    grid-area: Section;
-    display: block;
-    align-items: center;
+.Héro  #text-héro{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    max-width: 500px;
 }
 
 
 
-.GrilleHéro > #Image-héro{
-    grid-area: Aside;
-    justify-items: center;
-    align-items: center;
+.Héro  #Image-héro{
+    flex: 1;
+    object-fit: cover;
+    width: 100%;
 }
 
 .GrilleInfo > #Recettes{
@@ -71,23 +67,92 @@ main p{
 .info{
     background-color: white ;
     border-radius: 16px;
-    padding: 32px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     transform: translateY(-5px);
-    font-size: small;
-    font-weight:bold;
-    width: 350px;
+    min-width: 350px;
+    margin:15px;
 }
 
-.info h3{
+.info div{
+    min-width: 250px;
+    padding: 32px;
+}
+
+.info h2{
     color: #135ad4;
 }
 
 .info img{
     height: 200px;
+    width: 100%;
     object-fit: cover;
-    margin:25px;
-    border-radius:25px;
+}
+
+
+
+@media  (max-width:1024px){
     
+.GrilleInfo{
+grid-template-areas:
+    "Recettes Techniques"
+    "Saisonnier Vide";
+}  
+
+.Héro  #text-héro{
+    max-width: 325px;
+}
+
+.Héro #Image-héro{
+    
+    overflow: auto;
+
+}
+
+
+}
+
+@media  (max-width:768px){
+
+   
+    
+    .Héro #text-héro{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Héro{
+        flex-direction: column;  
+        text-align: center;
+        align-items: center;
+        justify-content: center; 
+    }
+
+    .GrilleInfo{
+        grid-template-areas:
+        "Recettes" 
+        "Techniques"
+        "Saisonnier";
+        grid-template-columns:100%;
+        justify-self: center;
+        align-self: center;
+        width: 100%;
+        overflow: auto;
+        
+    }
+    
+    
+}
+
+@media (max-width:480px){
+    .GrilleInfo .info{
+        
+        width: 100%;
+        justify-self: center;
+        align-self: center;
+        overflow: auto;
+
+        
+        
+    }
 }
 

@@ -7,6 +7,11 @@ section{
     padding: 30px;
 }
 
+article{
+    display: flex;
+    justify-content: center;
+}
+
 section h1{
     color: blue;
 }
@@ -22,7 +27,7 @@ section p{
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 30px;
+    margin: 30px;
     height: 100px;
 }
 
@@ -30,27 +35,31 @@ section p{
     display: flex;
     border-radius: 25px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    
-
     width: fit-content;
     padding: 50px;
+
+}
+
+#tableau table{
+    border-collapse: collapse;
+    min-height: 400px;
+   min-width: 1000px;
+}
+
+#tableau tr{
+    border-bottom: 4px solid #f8f9fa; ;
+    height: 60px;
 }
 
 
 
-article table{
-    width: 1000px;
-   
-
-}
-
-article table caption{
+#tableau table caption{
     color: blue;
 }
 
 
 
-article thead{
+#tableau thead{
     background-color: #f8f9fa;
     font-weight: 600;
     text-align: left;
@@ -59,7 +68,7 @@ article thead{
 
 
 
-article td div{
+#tableau td div{
     width: fit-content;
 }
 
@@ -69,7 +78,8 @@ grid-template-areas:
     "Fraicheur Local Conservation";
 grid-template-columns: repeat(auto-fit,minmax(250,1fr));
 text-align: center;
-padding: 50px;
+gap: 2rem;
+margin: 50px;
 }
 
 .GrilleInfo h3{
@@ -87,25 +97,73 @@ padding: 50px;
 
 .GrilleInfo > #Fraicheur{
     grid-area: Fraicheur;
-    padding: 2rem;
+    
 }
 
 .GrilleInfo > #Local{
     grid-area: Local;
-    padding: 2rem;
+    
 }
 
 .GrilleInfo > #Conservation{
     grid-area: Conservation;
-    padding: 2rem;
+
+    
 }
 
 .GrilleInfo .info{
     background-color: white ;
     border-radius: 16px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    width: fit-content;
+    padding: 2rem;
+    width: 300px;
 }
+
+@media  (max-width:1024px){
+    
+.GrilleInfo{
+grid-template-areas:
+    "Fraicheur Local"
+     "Conservation Vide";
+}  
+
+
+}
+
+@media  (max-width:768px){
+
+
+    .GrilleInfo{
+       grid-template-areas:
+        "Fraicheur" 
+        "Local"
+         "Conservation";
+        grid-template-columns:100%;
+        justify-self: center;
+        align-self: center;
+       
+        
+        
+    }
+    
+    .GrilleInfo .info{
+        width: 100%;
+        justify-self: center;
+        align-self: center;
+        flex: 1;
+      
+    }
+
+    #tableau{
+        overflow: auto;
+    }
+    
+}
+
+@media (max-width:480px){
+   
+}
+
 
 
 

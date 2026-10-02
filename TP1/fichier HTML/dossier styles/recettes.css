@@ -5,6 +5,7 @@ section{
    justify-content: center;
    align-items: center;
    flex-direction: column;
+   text-align: center;
 }
 
 h1{
@@ -21,10 +22,10 @@ display: grid;
 grid-template-areas:
     "Poutine Salade General"
     "Brownies Vide Vide";
-grid-template-columns:auto auto auto;
+grid-template-columns: min-content min-content min-content;
 grid-template-rows: auto ;
-justify-content: space-between;
-padding: 100px;
+margin: 100px;
+justify-content: center;
 }
 
 .GrilleInfo > #Poutine{
@@ -42,26 +43,84 @@ padding: 100px;
 
 }
 
+.GrilleInfo > #General{
+    grid-area: General;
+}
+
 .info{
     background-color: white ;
     border-radius: 16px;
-    padding: 32px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     transform: translateY(-5px);
-    font-size: small;
-    font-weight:bold;
-    width: 350px;
+   min-width:350px;
+    margin: 15px;
+}
+
+.info div{
+    padding: 32px;
 }
 
 .badges{
-    display: flex;
+    display:flex;
     justify-content: space-between;
-    width: 250px;
+    max-width: 250px;
+    
 }
 
-img{
+.GrilleInfo img{
     height: 200px;
     width: 100%;
     object-fit: cover;
     border-radius: 25px;
+}
+
+
+@media  (max-width:1024px){
+    
+.GrilleInfo{
+grid-template-areas:
+    "Poutine Salade"
+    "General Brownies";
+
+   
+}  
+
+}
+
+@media  (max-width:768px){
+
+
+    .GrilleInfo{
+        grid-template-areas:
+         "Poutine" 
+         "Salade"
+        " General" 
+        "Brownies";
+        grid-template-columns:100%;
+        align-self: center;
+        justify-self: center;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        overflow: auto;
+          
+    }
+
+    
+    
+}
+
+@media (max-width:480px){
+
+      .GrilleInfo .info{
+        
+        width: 100%;
+        justify-self: center;
+        align-self: center;
+        overflow: auto;
+
+        
+        
+    }
+
 }
