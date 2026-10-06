@@ -14,7 +14,7 @@ section{
 
 #bloc-info h3{
     font-size:x-large;
-    color: rgb(0, 0, 255);
+    color: var(--primary-color);
     padding-bottom: 10px;
 }
 
@@ -22,14 +22,14 @@ section{
 display: grid;
 grid-template-areas:
     "Poutine Texte";
-grid-template-columns: 600px;
+grid-template-columns: 1fr 1fr;
 grid-template-rows: 660px;
 justify-content: center;
 margin: 100px;
 }
 
 .GrilleInfo h2{
-    color: blue;
+    color: var(--primary-color);
     text-align: start;
 }
 
@@ -62,7 +62,7 @@ margin: 100px;
 .GrilleInfo img{
     height: 100%;
     width:100%;
-    flex: 1;
+    flex-shrink: 1;
     object-fit: cover;
    
 }
@@ -78,12 +78,14 @@ margin: 100px;
 }
 
 #Chemin a:link{
-    color: rgb(0, 0, 255);
+    color: var(--primary-color);
     text-decoration: none;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 #Chemin a:visited{
-    color: rgb(0, 0, 255);
+    color: var(--primary-color);
     text-decoration: none;
 }
 
@@ -100,7 +102,7 @@ text-decoration: underline;
 #Conseils{
     background-color: #f8f9fa;
     border-radius: 25px;
-    border-left:solid blue;
+    border-left:solid var(--primary-color);
     max-width: 450px;
     padding: 30px;
     margin: 10px;
@@ -128,6 +130,9 @@ button:hover{
     grid-template-areas:
     "Poutine"
     "Texte";
+    grid-template-columns: auto;
+
+    
     }
 
     section{

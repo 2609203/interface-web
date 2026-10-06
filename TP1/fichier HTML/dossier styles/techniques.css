@@ -20,11 +20,11 @@ section{
 }
 
 section h1{
-    color: blue;
+    color: var(--primary-color);
 }
 
 .GrilleInfo h2{
-    color: blue;
+    color: var(--primary-color);
 }
 
 .GrilleInfo h3{
@@ -62,15 +62,15 @@ section h1{
 .box{
 min-width: 300px;
 margin: 10px;
-background-color: white;
+background-color: var(--background-color);
 border-radius: 15px;
-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
 padding: 20px;
 }
 
 
 .carte{
-    background-color: white;
+    background-color: var(--background-color);
     border-radius: 15px;
     box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.1);
     margin: 50px;
@@ -78,7 +78,7 @@ padding: 20px;
 }
 
 #Mesures .carte{
-    background-color: #f8f9fa;
+    background-color: var(--background-color);;
     border-radius: 15px;
     box-shadow: none;
     margin: 50px;

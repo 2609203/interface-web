@@ -17,7 +17,7 @@ main{
 
 
 header{
-    background:linear-gradient(135deg,#002768,#135ad4);
+    background:linear-gradient(135deg,var(--primary-color),#135ad4);
     color: aliceblue;
     display: flex;
     justify-content: space-around;
@@ -74,7 +74,7 @@ footer{
 }
 
 #footer{
-    background-color:#CAE9FA;
+    background-color:var(--footer-bg);
     color: grey;
     display: flex;
     justify-content: space-around;
@@ -127,7 +127,7 @@ text-decoration: underline;
 
 #Cright{
     color: grey;
-    background-color:#CAE9FA;
+    background-color: var(--footer-bg);
     display: flex;
     align-items:flex-end; 
     justify-content: space-around
@@ -135,8 +135,8 @@ text-decoration: underline;
 }
 
 button{
-    border: 15px solid #39B54A ;
-    background-color: #39B54A;
+    border: 15px solid var(--secondary-color) ;
+    background-color: var(--secondary-color);
     border-radius: 25px;
     color: white;
     font-weight:bold;
@@ -164,7 +164,7 @@ button:hover{
 }
 
  .Facile{
-    background-color: #39B54A;
+    background-color: var(--secondary-color);
     border-radius: 15px;
     padding: 0.3rem 0.8rem;
     font-size: small;

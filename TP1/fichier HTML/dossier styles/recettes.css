@@ -10,7 +10,7 @@ section{
 
 section h1{
 
-    color: #135ad4;;
+    color: var(--primary-color);
 }
 
 main p{
@@ -48,7 +48,7 @@ justify-content: center;
 }
 
 .info{
-    background-color: white ;
+    background-color: var(--background-color);
     border-radius: 16px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     transform: translateY(-5px);

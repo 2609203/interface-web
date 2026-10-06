@@ -13,7 +13,7 @@ article{
 }
 
 section h1{
-    color: blue;
+    color: var(--primary-color);
 }
 
 section p{
@@ -43,18 +43,19 @@ section p{
 #tableau table{
     border-collapse: collapse;
     min-height: 400px;
-   min-width: 1000px;
+    width: 1000px;
+   min-width: 500px;
 }
 
 #tableau tr{
-    border-bottom: 4px solid #f8f9fa; ;
+    border-bottom: 4px solid var(--background-color); ;
     height: 60px;
 }
 
 
 
 #tableau table caption{
-    color: blue;
+    color: var(--primary-color);
 }
 
 
@@ -84,14 +85,14 @@ margin: 50px;
 
 .GrilleInfo h3{
     font-size:1.2rem ;
-    color: blue;
+    color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
 #Conseil{
     grid-area: conseil;
     text-align: center;
-    color: blue;
+    color: var(--primary-color);
     padding-top: 30px;
 }
 
@@ -112,7 +113,7 @@ margin: 50px;
 }
 
 .GrilleInfo .info{
-    background-color: white ;
+    background-color: var(--background-color);
     border-radius: 16px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     padding: 2rem;
@@ -155,7 +156,7 @@ grid-template-areas:
     }
 
     #tableau{
-        overflow: auto;
+        overflow-x: auto;
     }
     
 }

@@ -33,12 +33,13 @@ padding-bottom: 40px;
 }
 
 .Héro h1{
-    color: #135ad4;
+    color: var(--primary-color);
+    font-size: 4vh;
 
 }
 
 .Héro h3{
-    color: #39B54A;
+    color: var(--secondary-color);
 
 }
 
@@ -69,7 +70,7 @@ margin: 100px;
 }
 
 .info{
-    background-color: white ;
+    background-color: var(--background-color);
     border-radius: 16px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     transform: translateY(-5px);
@@ -83,7 +84,7 @@ margin: 100px;
 }
 
 .info h2{
-    color: #135ad4;
+    color: var(--primary-color);
 }
 
 .info img{
@@ -132,14 +133,17 @@ grid-template-areas:
         justify-self: center;
         align-self: center;
         width: 100%;
-        
-        
+           
     }
+
+    
     
     
 }
 
 @media (max-width:480px){
+
+   
     
 }
 
