@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Page d'erreur</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="glitch error-glitch" data-text="ERREUR 404">ERREUR 404</h1>
+        </header>
+
+        <main class="game-area">
+            <div class="room active">
+                <div class="room-title"> Oups ! Mauvaise page</div>
+                <div class="room-description">
+                    <p>Cette page n'existe pas ou n'est pas la bonne destination...</p>
+                    <p class="hint"> <strong>Indice:</strong> Retournez à la salle précédente et vérifiez les commentaires HTML</p>
+                </div>
+                
+                <div class="game-content">
+                    <div class="error-content">
+                        <h3> Que s'est-il passé ?</h3>
+                        <p>Vous avez suivi un mauvais lien ! C'était peut-être une fausse piste...</p>
+                        <p>Les développeurs laissent parfois des indices dans les commentaires HTML.</p>
+                        
+                        <div class="error-actions">
+                            <a href="room2.html" class="back-btn">⬅️ Retour à la salle 2</a>
+                            <a href="index.html" class="home-btn"> Retour à l'accueil</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

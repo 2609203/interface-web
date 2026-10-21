@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> VICTOIRE ! </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="glitch victory-glitch" data-text="VICTOIRE !">VICTOIRE !</h1>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 100%"></div>
+            </div>
+            <div class="room-counter"> TERMINÉ ! </div>
+        </header>
+
+        <main class="game-area">
+            <div class="room active">
+                <div class="victory-screen">
+                    <h2 class="victory-title"> FÉLICITATIONS ! </h2>
+                    <p class="victory-message">Vous avez terminé l'Escape Room DevTools !</p>
+                    <p>Vous maîtrisez maintenant les outils de développement essentiels :</p>
+                    <ul class="skills-list">
+                        <li> Inspection d'éléments HTML</li>
+                        <li> Modification de CSS en direct</li>
+                        <li> Découverte d'éléments cachés</li>
+                        <li> Lecture de commentaires HTML</li>
+                        <li> Correction de liens cassés</li>
+                        <li> Debug de positionnements CSS</li>
+                        <li> Manipulation des couches (z-index)</li>
+                        <li> Révélation d'éléments invisibles</li>
+                        <li> Gestion des transformations CSS</li>
+                        <li> Résolution de problèmes d'opacité</li>
+                    </ul>
+                    
+                    <div class="victory-actions">
+                        <a href="index.html" class="restart-btn"> Recommencer l'aventure</a>
+                        <div class="share-section">
+                            <p>Partagez votre réussite :</p>
+                            <p class="achievement"> J'ai terminé l'Escape Room DevTools ! </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="game.js"></script>
+    <script>
+        // Effet de confettis pour la victoire
+        function createConfetti() {
+            const colors = ['#00ff41', '#4ecdc4', '#ff6b35', '#ffbe0b', '#8ac926'];
+            
+            for (let i = 0; i < 100; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.left = Math.random() * 100 + 'vw';
+                    confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.animationDelay = Math.random() * 3 + 's';
+                    confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                    document.body.appendChild(confetti);
+                    
+                    setTimeout(() => confetti.remove(), 6000);
+                }, i * 50);
+            }
+        }
+        
+        // Lancer les confettis au chargement
+        window.addEventListener('load', createConfetti);
+    </script>
+</body>
+</html>

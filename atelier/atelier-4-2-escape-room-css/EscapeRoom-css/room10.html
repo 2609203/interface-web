@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salle 10 - Le Boss Final</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="glitch" data-text="BOSS FINAL">BOSS FINAL</h1>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 95%"></div>
+        </div>
+        <div class="room-counter">Salle 10 / 10</div>
+      </header>
+
+      <main class="game-area">
+        <div class="room active">
+          <div class="room-title"> Le Boss Final</div>
+          <div class="room-description">
+            <p>
+              Félicitations ! Cette dernière salle combine plusieurs techniques
+              que vous avez apprises.
+            </p>
+            <p class="hint">
+               <strong>Défi final:</strong> Utilisez toutes vos compétences
+              DevTools pour trouver le lien de victoire
+            </p>
+          </div>
+
+          <div class="game-content">
+            <div class="final-challenge">
+              <!-- Commentaire secret: Un des liens est caché avec display: none -->
+              <!-- CODE_FINAL: VICTORY2025 -->
+              <div class="challenge-1" style="display: none">
+                <a href="wrong-final.html" class="fake-final-link"
+                  > Faux lien final</a
+                >
+              </div>
+
+              <div class="challenge-2" data-secret="VICTORY2025">
+                <p>Code final requis pour la victoire :</p>
+                <input
+                  type="text"
+                  id="finalCode"
+                  placeholder="Code final..."
+                  class="password-input"
+                />
+                <button onclick="checkFinalCode()" class="password-btn">
+                   VICTOIRE
+                </button>
+                <div id="finalResult" class="password-result"></div>
+                <!-- INDICE: Le code final est dans les commentaires HTML de cette section -->
+              </div>
+
+              <div class="challenge-3">
+                <div class="transformed-final-container">
+                  <a href="another-fake.html" class="transformed-final-link"
+                    > Encore un faux</a
+                  >
+                </div>
+              </div>
+
+              <div class="challenge-4">
+                <a href="fake-victory.html" class="off-screen-final-link"
+                  > Fausse victoire</a
+                >
+              </div>
+
+              <p>Trouvez le code final pour remporter la victoire !</p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="navigation">
+        <a href="room9.html" class="nav-btn">⬅️ Salle 9</a>
+        <a href="index.html" class="nav-btn"> Accueil</a>
+      </footer>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>

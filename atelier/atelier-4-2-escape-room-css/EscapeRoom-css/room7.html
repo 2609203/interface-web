@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- Le mot de passe est dans l'attribut data-password d'un élément ci-dessous -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salle 7 - Le Fantôme Transparent</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="glitch" data-text="SALLE 7">SALLE 7</h1>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 70%"></div>
+        </div>
+        <div class="room-counter">Salle 7 / 10</div>
+      </header>
+
+      <main class="game-area">
+        <div class="room active">
+          <div class="room-title"> Le Mot de Passe Caché</div>
+          <div class="room-description">
+            <p>Cette salle est protégée par un mot de passe secret...</p>
+            <p class="hint">
+               <strong>Indice:</strong> Le mot de passe pourrait être caché
+              dans les attributs HTML
+            </p>
+          </div>
+
+          <!-- "motdepasse" n'est pas un  bon mot de passe securitaire -->
+          <div class="game-content">
+            <div class="hidden-password-area">
+              <p>Trouvez le mot de passe pour continuer :</p>
+
+              <div
+                class="password-container"
+                data-password="INSPECTOR"
+                data-fake="wrongpass"
+              >
+                <input
+                  type="password"
+                  id="hiddenPassword"
+                  placeholder="Mot de passe..."
+                  class="password-input"
+                />
+                <button onclick="checkHiddenPassword()" class="password-btn">
+                   Déverrouiller
+                </button>
+              </div>
+              <div id="hiddenPasswordResult" class="password-result"></div>
+              <!-- INDICE: Regardez les attributs data-* de l'élément password-container -->
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="navigation">
+        <a href="room6.html" class="nav-btn">⬅️ Salle 6</a>
+        <a href="index.html" class="nav-btn"> Accueil</a>
+      </footer>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>

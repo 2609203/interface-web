@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Erreur - Énigme non résolue</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="glitch error-glitch" data-text="ÉNIGME NON RÉSOLUE">ÉNIGME NON RÉSOLUE</h1>
+        </header>
+
+        <main class="game-area">
+            <div class="room active">
+                <div class="room-title"> Vous avez cliqué à l'aveugle !</div>
+                <div class="room-description">
+                    <p>Vous avez tenté de cliquer sur un élément sans résoudre l'énigme...</p>
+                    <p class="hint"> <strong>Conseil:</strong> Utilisez les DevTools pour résoudre le problème avant de cliquer</p>
+                </div>
+                
+                <div class="game-content">
+                    <div class="error-content">
+                        <h3> Que s'est-il passé ?</h3>
+                        <p>Vous avez essayé de cliquer sur un élément qui n'était pas encore "réparé" !</p>
+                        
+                        <div class="error-reasons">
+                            <h4>Raisons possibles :</h4>
+                            <ul>
+                                <li> <strong>Couleur invisible :</strong> Le lien a la même couleur que le fond</li>
+                                <li> <strong>Transformation CSS :</strong> L'élément est déformé ou retourné</li>
+                                <li> <strong>Opacité nulle :</strong> L'élément est complètement transparent</li>
+                                <li> <strong>Élément bloqué :</strong> Un autre élément empêche le clic</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="solution-hint">
+                            <h4> Comment résoudre :</h4>
+                            <ol>
+                                <li>Ouvrez les DevTools (F12)</li>
+                                <li>Inspectez l'élément problématique</li>
+                                <li>Modifiez le CSS pour corriger le problème</li>
+                                <li>Testez que l'élément est maintenant visible/cliquable</li>
+                                <li>Cliquez sur l'élément corrigé</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="error-actions">
+                            <button onclick="history.back()" class="back-btn">⬅️ Retour à l'énigme</button>
+                            <a href="index.html" class="home-btn"> Retour à l'accueil</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="game.js"></script>
+    <script>
+        // Ajouter des informations sur la salle d'origine si disponible
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const fromRoom = urlParams.get('from');
+            const problem = urlParams.get('problem');
+            
+            if (fromRoom) {
+                const roomInfo = document.createElement('div');
+                roomInfo.className = 'room-info';
+                roomInfo.innerHTML = `
+                    <p><strong>Salle d'origine :</strong> ${fromRoom}</p>
+                    ${problem ? `<p><strong>Problème détecté :</strong> ${problem}</p>` : ''}
+                `;
+                document.querySelector('.error-content').prepend(roomInfo);
+            }
+        });
+    </script>
+</body>
+</html>

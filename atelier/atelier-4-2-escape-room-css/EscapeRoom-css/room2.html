@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salle 2 - Les Commentaires Secrets</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="glitch" data-text="SALLE 2">SALLE 2</h1>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 20%"></div>
+        </div>
+        <div class="room-counter">Salle 2 / 10</div>
+      </header>
+
+      <main class="game-area">
+        <div class="room active">
+          <div class="room-title"> Les Commentaires Secrets</div>
+          <div class="room-description">
+            <p>
+              Les développeurs laissent parfois des messages cachés dans le
+              code...
+            </p>
+            <p class="hint">
+               <strong>Indice:</strong> Regardez les commentaires HTML de
+              cette section
+            </p>
+          </div>
+
+          <div class="game-content">
+            <div class="search-area">
+              <p>Rien à voir ici, juste du contenu normal.</p>
+              <p>Continuez votre recherche dans les commentaires...</p>
+
+              <div class="link-area">
+                <p>Le lien vers la suite :</p>
+                <a href="wrong-page.html" class="broken-link"
+                  > Salle suivante</a
+                >
+                <p class="error-message"> Ce lien semble cassé...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- SECRET: Le nom de fichier correct est "room3.html" -->
+
+      <footer class="navigation">
+        <a href="room1.html" class="nav-btn">⬅️ Salle 1</a>
+        <a href="index.html" class="nav-btn"> Accueil</a>
+      </footer>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salle 6 - L'Élément Égaré</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="glitch" data-text="SALLE 6">SALLE 6</h1>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 60%"></div>
+            </div>
+            <div class="room-counter">Salle 6 / 10</div>
+        </header>
+
+        <main class="game-area">
+            <div class="room active">
+                <div class="room-title"> La Transformation CSS</div>
+                <div class="room-description">
+                    <p>Un lien a été déformé pour le rendre illisible...</p>
+                    <p class="hint"> <strong>Indice:</strong> Cherchez des transformations CSS comme scale ou rotate</p>
+                </div>
+                
+                <div class="game-content">
+                    <div class="transform-area">
+                        <p>Le lien mystérieux se trouve quelque part ici :</p>
+                        <div class="transformed-container">
+                            <a href="room7.html" class="transformed-link" id="transformedLink"> Salle 7</a>
+                        </div>
+                        <p>Pouvez-vous le rendre lisible ?</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="navigation">
+            <a href="room5.html" class="nav-btn">⬅️ Salle 5</a>
+            <a href="index.html" class="nav-btn"> Accueil</a>
+        </footer>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

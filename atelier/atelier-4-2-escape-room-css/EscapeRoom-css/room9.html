@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salle 9 - Le Jeu des Couches</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="glitch" data-text="SALLE 9">SALLE 9</h1>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 90%"></div>
+            </div>
+            <div class="room-counter">Salle 9 / 10</div>
+        </header>
+
+        <main class="game-area">
+            <div class="room active">
+                <div class="room-title"> Le Fantôme Transparent</div>
+                <div class="room-description">
+                    <p>Un lien est présent mais complètement transparent...</p>
+                    <p class="hint"> <strong>Indice:</strong> L'opacité pourrait être à 0</p>
+                </div>
+                
+                <div class="game-content">
+                    <div class="opacity-area">
+                        <p>Quelque chose se cache dans cette zone:</p>
+                        <div class="transparent-container">
+                            <a href="room10.html" class="transparent-link" id="transparentLink"> Lien vers la salle 10</a>
+                        </div>
+                        <p>Pouvez-vous le révéler ?</p>
+                        <p class="help-text">Essayez de passer la souris dans la zone...</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="navigation">
+            <a href="room8.html" class="nav-btn">⬅️ Salle 8</a>
+            <a href="index.html" class="nav-btn"> Accueil</a>
+        </footer>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

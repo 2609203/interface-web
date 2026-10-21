@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salle 8 - La Boîte Mystérieuse</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="glitch" data-text="SALLE 8">SALLE 8</h1>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 80%"></div>
+        </div>
+        <div class="room-counter">Salle 8 / 10</div>
+      </header>
+
+      <main class="game-area">
+        <div class="room active">
+          <div class="room-title"> L'Élément Égaré</div>
+          <div class="room-description">
+            <p>
+              Un lien contenant la suite a été positionné hors de l'écran...
+            </p>
+            <p class="hint">
+               <strong>Indice:</strong> Vérifiez les positions négatives ou
+              très grandes
+            </p>
+          </div>
+
+          <div class="game-content">
+            <div class="position-area">
+              <p>Le lien est quelque part par ici...</p>
+              <div class="search-zone">
+                <p> Zone de recherche</p>
+                <p>Mais où peut-il bien être ?</p>
+              </div>
+              <a href="room9.html" class="off-screen-link"
+                > Lien vers la salle 9</a
+              >
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="navigation">
+        <a href="room7.html" class="nav-btn">⬅️ Salle 7</a>
+        <a href="index.html" class="nav-btn"> Accueil</a>
+      </footer>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>

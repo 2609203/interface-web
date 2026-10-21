@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
+.entete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 16px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #222;
+}
+
+.contenu {
+  padding: 16px;
+}
+
+.cartes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.carte {
+  border: 1px solid #ddd;
+  padding: 12px;
+  flex: 1 1 250px; /* min largeur 250px, puis s'étire */
+}
+
+/* Pied de page centré */
+.pied {
+  text-align: center;
+  padding: 12px 16px;
+  border-top: 1px solid #ddd;
+}

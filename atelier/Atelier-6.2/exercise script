@@ -1,0 +1,162 @@
+let age = 15;
+
+if (age >= 13 && age <= 17) {
+  console.log("Adolescent");
+} else if (age >= 18) {
+  console.log("Adulte");
+} else {
+  console.log("Enfant");
+}
+
+
+
+let jour = 5;
+
+switch (jour) {
+  case 1:
+    console.log("Lundi");
+    break;
+  case 5:
+    console.log("Vendredi");
+    break;
+  case 0:
+  case 6:
+    console.log("Weekend");
+    break;
+  default:
+    console.log("Autre jour");
+}
+
+
+
+for (let i = 0; i <= 50; i++) {
+  if (i % 5 === 0) {
+    console.log(i);
+  }
+}
+
+
+
+
+const carre = (x) => x * x;
+
+function appliquerOperation(nombre, fonction) {
+  console.log(fonction(nombre));
+}
+
+appliquerOperation(4, carre); // Affiche 16
+
+
+
+
+let livre = {
+  titre: "1984",
+  auteur: "George Orwell",
+  annee: 1949
+};
+
+console.log(livre.titre);    // notation point
+console.log(livre["titre"]); // notation crochet
+
+
+
+
+
+class Auto {
+  constructor(marque, couleur, vitesse) {
+    this.marque = marque;
+    this.couleur = couleur;
+    this.vitesse = vitesse;
+  }
+
+  accelerer() {
+    this.vitesse += 10;
+  }
+}
+
+let maVoiture = new Auto("Toyota", "Rouge", 50);
+maVoiture.accelerer();
+maVoiture.accelerer();
+console.log(maVoiture.vitesse); // 70
+
+
+
+
+
+let fruits = ["Pomme", "Banane", "Orange"];
+console.log(fruits); // ["Pomme", "Banane", "Orange"]
+
+fruits.push("Poire");
+console.log(fruits); // ["Pomme", "Banane", "Orange", "Poire"]
+
+fruits.pop();
+console.log(fruits); // ["Pomme", "Banane", "Orange"]
+
+
+
+
+const nombres = [2, 5, 8, 11, 14];
+
+const carres = nombres.map(n => n * n);
+console.log(carres); // [4, 25, 64, 121, 196]
+
+const pairs = nombres.filter(n => n % 2 === 0);
+console.log(pairs); // [2, 8, 14]
+
+const premierGrand = nombres.find(n => n > 10);
+console.log(premierGrand); // 11
+
+
+
+
+setTimeout(() => {
+  console.log("Bonjour");
+}, 2000);
+
+// setInterval avec arrêt
+let intervalId = setInterval(() => {
+  console.log("Encore là ?");
+}, 3000);
+
+setTimeout(() => {
+  clearInterval(intervalId);
+}, 10000);
+
+
+
+const joueur = { nom: "Jérémie", age: 25, score: 120, niveau: "avancé" };
+
+
+const {nom,score} = joueur;
+console.log(nom);
+console.log(score);
+
+function afficherScore({ nom, score }) {
+  console.log(`${nom} a ${score} points`);
+}
+
+afficherScore(joueur);
+
+
+
+
+
+const inventaireJoueur1 = ["Potion", "Fusil à pompe", "Pistolet"];
+const inventaireJoueur2 = ["Sniper", "Potion", "Pioche"];
+
+// Fusion avec l’opérateur de décomposition (...)
+const inventaireTotal = [...inventaireJoueur1, ...inventaireJoueur2];
+
+console.log(inventaireTotal);
+// ["Potion", "Fusil à pompe", "Pistolet", "Sniper", "Potion", "Pioche"]
+
+
+
+
+const joueur = { pseudo: "NoobMaster", vie: 100, niveau: 5 };
+
+// Copie + modifications avec ...
+const joueurAmeliore = { ...joueur, vie: 150, niveau: 6 };
+
+console.log(joueurAmeliore);
+// { pseudo: "NoobMaster", vie: 150, niveau: 6 }

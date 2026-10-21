@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salle 1 - L'Élément Fantôme</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="glitch" data-text="SALLE 1">SALLE 1</h1>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 10%"></div>
+        </div>
+        <div class="room-counter">Salle 1 / 10</div>
+      </header>
+
+      <main class="game-area">
+        <div class="room active">
+          <div class="room-title"> L'Élément Fantôme</div>
+          <div class="room-description">
+            <p>
+              Un élément contenant le lien vers la suite est caché dans cette
+              page...
+            </p>
+            <p class="hint">
+               <strong>Indice:</strong> Cherchez un élément avec
+              <code>display: none</code>
+            </p>
+          </div>
+
+          <div class="game-content">
+            <div class="visible-content">
+              <p>Vous ne voyez rien d'inhabituel ici...</p>
+              <p>Mais peut-être que quelque chose se cache...</p>
+              <p>Utilisez l'inspecteur pour fouiller le code !</p>
+            </div>
+
+            <div class="hidden-secret">
+              <p class="secret-message">
+                 Bravo ! Vous avez trouvé l'élément caché !
+              </p>
+              <a href="room2.html" class="next-room-btn"
+                > Aller à la salle 2</a
+              >
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="navigation">
+        <a href="index.html" class="nav-btn"> Accueil</a>
+      </footer>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>

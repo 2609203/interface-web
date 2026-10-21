@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salle 4 - Le Texte Fantôme</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="glitch" data-text="SALLE 4">SALLE 4</h1>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 40%"></div>
+            </div>
+            <div class="room-counter">Salle 4 / 10</div>
+        </header>
+
+        <main class="game-area">
+            <div class="room active">
+                <div class="room-title"> Le Lien Bloqué</div>
+                <div class="room-description">
+                    <p>Un lien vers la sortie existe, mais impossible de cliquer dessus...</p>
+                    <p class="hint"> <strong>Indice:</strong> Un élément invisible bloque peut-être le clic</p>
+                </div>
+                
+                <div class="game-content">
+                    <div class="link-area">
+                        <p>Cliquez sur le lien ci-dessous pour continuer:</p>
+                        <div class="blocked-link-container">
+                            <a href="room5.html" class="blocked-link"> Lien vers la salle 5</a>
+                            <div class="invisible-blocker"></div>
+                        </div>
+                        <p class="blocked-message"> Le lien ne fonctionne pas... Que se passe-t-il ?</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="navigation">
+            <a href="room3.html" class="nav-btn">⬅️ Salle 3</a>
+            <a href="index.html" class="nav-btn"> Accueil</a>
+        </footer>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

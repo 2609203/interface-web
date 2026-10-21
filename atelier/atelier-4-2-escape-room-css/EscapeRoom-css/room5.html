@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salle 5 - La Transformation CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="glitch" data-text="SALLE 5">SALLE 5</h1>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 50%"></div>
+            </div>
+            <div class="room-counter">Salle 5 / 10</div>
+        </header>
+
+        <main class="game-area">
+            <div class="room active">
+                <div class="room-title"> Le Texte Fantôme</div>
+                <div class="room-description">
+                    <p>Un lien important est écrit ici, mais il est invisible à l'œil nu...</p>
+                    <p class="hint"> <strong>Indice:</strong> La couleur du texte pourrait être identique au fond</p>
+                </div>
+                
+                <div class="game-content">
+                    <div class="invisible-text-area">
+                        <p>Regardez bien cette zone:</p>
+                        <div class="hidden-link-container">
+                            <a href="room6.html" class="invisible-link" id="invisibleLink">Lien vers la salle 6</a>
+                        </div>
+                        <p>Y a-t-il quelque chose que vous ne voyez pas ?</p>
+                        <p class="help-text">Sélectionnez le texte ou inspectez cette zone...</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="navigation">
+            <a href="room4.html" class="nav-btn">⬅️ Salle 4</a>
+            <a href="index.html" class="nav-btn"> Accueil</a>
+        </footer>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

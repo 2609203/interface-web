@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevTools Escape Room - Accueil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="glitch" data-text="DEVTOOLS ESCAPE ROOM">DEVTOOLS ESCAPE ROOM</h1>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress" style="width: 0%"></div>
+            </div>
+            <div class="room-counter">Salle d'accueil</div>
+        </header>
+
+        <main class="game-area">
+            <div class="room active">
+                <div class="room-title"> Bienvenue dans l'Escape Room DevTools</div>
+                <div class="room-description">
+                    <p>Bienvenue dans cette aventure interactive ! Vous allez apprendre à maîtriser les outils de développement du navigateur.</p>
+                    <p class="hint"> <strong>Objectif:</strong> Résolvez 10 énigmes en utilisant les DevTools pour progresser</p>
+                </div>
+                
+                <div class="game-content">
+                    <div class="welcome-content">
+                        <h3> Outils nécessaires :</h3>
+                        <ul>
+                            <li><strong>F12</strong> ou <strong>Clic droit → Inspecter</strong></li>
+                            <li>Onglet <strong>Elements</strong> pour voir le HTML</li>
+                            <li>Panel <strong>Styles</strong> pour modifier le CSS</li>
+                            <li>Un peu de curiosité et de logique !</li>
+                        </ul>
+                        
+                        <h3> Règles du jeu :</h3>
+                        <ul>
+                            <li>Chaque salle contient une énigme à résoudre</li>
+                            <li>Utilisez uniquement les DevTools (pas d'édition de fichiers)</li>
+                            <li>Lisez attentivement les indices</li>
+                            <li>Attention aux fausses pistes !</li>
+                        </ul>
+                        
+                        <div class="start-button-area">
+                            <a href="room1.html" class="start-btn"> Commencer l'aventure</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="hint-panel">
+            <div class="hint-toggle" onclick="toggleHints()">
+                 Aide générale
+            </div>
+            <div class="hint-content" id="hint-content">
+                <p><strong>Raccourcis utiles :</strong></p>
+                <ul>
+                    <li><strong>F12</strong> : Ouvrir/fermer les DevTools</li>
+                    <li><strong>Ctrl+Shift+C</strong> : Mode sélection d'élément</li>
+                    <li><strong>Double-clic</strong> sur une valeur CSS pour la modifier</li>
+                    <li><strong>Clic droit</strong> sur un élément → Edit as HTML</li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

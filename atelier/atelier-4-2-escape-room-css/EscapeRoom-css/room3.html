@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- SECRET_CODE: DEVTOOLS2025 -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salle 3 - Le Lien Bloqué</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <!-- j'ai essayé le code  "PASSWORD123" mais je ne crois pas que cela ne fonctionne... -->
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="glitch" data-text="SALLE 3">SALLE 3</h1>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 30%"></div>
+        </div>
+        <div class="room-counter">Salle 3 / 10</div>
+      </header>
+
+      <main class="game-area">
+        <div class="room active">
+          <div class="room-title"> Le Code Secret</div>
+          <div class="room-description">
+            <p>Un code secret est caché quelque part dans cette page...</p>
+            <p class="hint">
+               <strong>Indice:</strong> Les développeurs laissent parfois des
+              secrets dans les commentaires HTML
+            </p>
+            <!-- Je n'ai pas trouvé le code secret... -->
+          </div>
+
+          <div class="game-content">
+            <div class="password-area">
+              <p>Entrez le code secret pour accéder à la salle suivante :</p>
+
+              <div class="password-form">
+                <input
+                  type="text"
+                  id="secretCode"
+                  placeholder="Code secret..."
+                  class="password-input"
+                />
+                <button onclick="checkPassword()" class="password-btn">
+                   Valider
+                </button>
+              </div>
+              <div id="passwordResult" class="password-result"></div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="navigation">
+        <a href="room2.html" class="nav-btn">⬅️ Salle 2</a>
+        <a href="index.html" class="nav-btn"> Accueil</a>
+      </footer>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>

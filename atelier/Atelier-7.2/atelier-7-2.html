@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Atelier 7.2 — Événements JavaScript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      :root {
+        --accent: #2563eb;
+        --ok: #16a34a;
+        --warn: #f59e0b;
+        --bg: #f7f7fb;
+        --card: #ffffff;
+        --muted: #6b7280;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
+          Arial, sans-serif;
+        line-height: 1.5;
+        margin: 0;
+        background: var(--bg);
+        color: #111827;
+      }
+      header {
+        padding: 24px;
+        background: #111827;
+        color: #fff;
+      }
+      header h1 {
+        margin: 0 0 8px;
+        font-size: 1.4rem;
+      }
+      header p {
+        margin: 0;
+        color: #cbd5e1;
+      }
+      main {
+        max-width: 1000px;
+        margin: 24px auto;
+        padding: 0 16px 48px;
+      }
+
+      .ex {
+        background: var(--card);
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 16px;
+        margin-bottom: 16px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+      }
+      .ex h2 {
+        margin: 0 0 8px;
+        font-size: 1.05rem;
+      }
+      .consigne {
+        margin: 8px 0 12px;
+        color: var(--muted);
+      }
+      .zone {
+        border: 1px dashed #d1d5db;
+        padding: 12px;
+        border-radius: 8px;
+        background: #fafafa;
+      }
+      .row {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        align-items: center;
+        list-style: none;
+      }
+      button,
+      input[type='submit'] {
+        padding: 8px 12px;
+        border-radius: 8px;
+        border: 1px solid #d1d5db;
+        background: #fff;
+        cursor: pointer;
+      }
+      button.primary {
+        background: var(--accent);
+        color: #fff;
+        border-color: var(--accent);
+      }
+      .badge {
+        display: inline-block;
+        padding: 2px 8px;
+        border-radius: 999px;
+        background: #eef2ff;
+        color: #3730a3;
+        font-size: 0.8rem;
+      }
+      .card {
+        border: 2px solid #94a3b8;
+        border-radius: 10px;
+        padding: 12px;
+        background: #f8fafc;
+        transition: transform 0.25s ease, background 0.25s ease;
+      }
+      .ouvert {
+        transform: scale(1.03);
+        background: #fffbe6;
+      }
+      .cache {
+        display: none;
+      }
+      .ok {
+        color: var(--ok);
+      }
+      .warn {
+        color: var(--warn);
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 10px;
+      }
+      img.thumb {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        border-radius: 8px;
+        border: 1px solid #e5e7eb;
+      }
+      label {
+        display: block;
+        margin: 6px 0 2px;
+      }
+      input[type='text'],
+      input[type='email'],
+      input[type='number'] {
+        padding: 8px;
+        border-radius: 8px;
+        border: 1px solid #d1d5db;
+        width: 100%;
+      }
+      code {
+        background: #f3f4f6;
+        padding: 2px 6px;
+        border-radius: 6px;
+      }
+      .log {
+        min-height: 28px;
+        padding: 6px 8px;
+        background: #f3f4f6;
+        border-radius: 6px;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      }
+      .fruit.actif { background: #dcfce7; color: #166534; padding: 4px 8px; border-radius: 6px; }
+    </style>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Atelier 7.2 — Événements JavaScript (4 exercices)</h1>
+      <p>En lien avec la théorie 7.2. Utiliser addEventListener() pour réagir aux clics et à la soumission du formulaire, en réutilisant les manipulations du DOM de l’atelier 7.1. Écrire le JavaScript dans un fichier <code>app.js</code> placé dans le même dossier. Il est déjà relié dans le <code>head</code> avec <code>defer</code>. Ne pas modifier le HTML ni le CSS.</p>
+    </header>
+    <main>
+      <!-- Ex 1 -->
+      <section class="ex" id="ex1">
+        <h2>Exercice 1 — Clic, value et validation</h2>
+        <p class="consigne">
+          Tâches JS : lire <code>#nom</code> et <code>#age</code> au clic sur
+          «Afficher», valider que <code>age</code> est un nombre (≥ 0), puis
+          afficher «Bonjour, NOM (AGE)» dans <code>#out1</code>.
+        </p>
+        <div class="zone grid" role="form" aria-labelledby="form1label">
+          <div class="row" id="form1label" hidden>Formulaire</div>
+          <div>
+            <label for="nom">Nom</label>
+            <input id="nom" type="text" placeholder="Votre nom" />
+          </div>
+          <div>
+            <label for="age">Âge</label>
+            <input id="age" type="number" min="0" />
+          </div>
+          <button id="btn1" class="primary">Afficher</button>
+          <div id="out1" class="log" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <!-- Ex 2 -->
+      <section class="ex" id="ex2">
+        <h2>Exercice 2 — Clic et classList (add/remove/toggle/contains)</h2>
+        <p class="consigne">
+          Tâches JS : au clic sur le bouton, (a)
+          <code>toggle('ouvert')</code> sur <code>#carte2</code>, (b) afficher
+          l’état dans <code>#out2</code>, (c) s’assurer que la classe
+          <code>cache</code> est retirée.
+        </p>
+        <div class="zone">
+          <button id="btn2" class="primary">Ouvrir / Fermer</button>
+          <div id="carte2" class="card cache" aria-live="polite">
+            <p>Carte interactive</p>
+          </div>
+          <div id="out2" class="log"></div>
+        </div>
+      </section>
+
+      <!-- Ex 3 -->
+      <section class="ex" id="ex3">
+        <h2>Exercice 3 — Écouter deux boutons et mettre à jour une liste</h2>
+        <p class="consigne">
+          Tâches JS : créer des éléments <code>&lt;li&gt;</code> à partir des
+          champs, puis (a) <code>prepend</code> pour ajouter en tête, (b)
+          <code>append</code> pour la fin, (c) utiliser
+          <code>before</code>/<code>after</code> pour insérer des marqueurs
+          autour de la liste.
+        </p>
+        <div class="zone">
+          <div class="row">
+            <label for="item3">Nouvel item</label>
+            <input id="item3" type="text" />
+            <button id="addHead3">Ajouter en tête</button>
+            <button id="addTail3">Ajouter en fin</button>
+          </div>
+          <ul id="liste3" class="row" aria-label="liste dynamique">
+            <li>Déjà là</li>
+          </ul>
+        </div>
+      </section>
+
+      <aside class="ex"><h2>Aide pour la validation du courriel</h2><p>La validation est fournie pour concentrer l’exercice sur <code>submit</code> et <code>preventDefault()</code>. Elle sert à l’exercice et ne vérifie pas l’existence d’une adresse.</p><pre><code>const courrielValide = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i.test(courriel);</code></pre></aside>
+      <!-- Ex 4 -->
+      <section class="ex" id="ex4">
+        <h2>
+          Exercice 4 — Supprimer / Remplacer (remove, replaceWith) + Événements
+          & Validation
+        </h2>
+        <p class="consigne">
+          Tâches JS : (a) au clic «Supprimer l’alerte», retirer
+          <code>#alerte4</code> avec <code>remove()</code> ; (b) au clic
+          «Remplacer par succès», remplacer <code>#alerte4</code> par un bloc
+          de succès via <code>replaceWith()</code> ; (c) à la soumission du
+          formulaire, valider le courriel avec le code fourni dans l'encadré précédent
+          (afficher ok/erreur dans <code>#out4</code>) ; (d) empêcher le
+          rechargement (prévenir l’événement).
+        </p>
+        <div class="zone">
+          <div id="alerte4" class="card" role="alert">
+            ⚠️ Attention : complétez votre profil.
+          </div>
+          <div class="row" style="margin-top: 8px">
+            <button id="del4">Supprimer l’alerte</button>
+            <button id="rep4" class="primary">Remplacer par succès</button>
+          </div>
+
+          <form id="form4" class="row" style="margin-top: 12px" novalidate>
+            <div>
+              <label for="email4">Courriel</label>
+              <input
+                id="email4"
+                type="email"
+                placeholder="ex: nom@domaine.com"
+              />
+            </div>
+            <input type="submit" value="Valider" />
+          </form>
+          <div id="out4" class="log" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
